@@ -49,4 +49,12 @@ Steps:
             console.log(`Server is Running on port ${PORT}`);
         });
 
-    21 - 
+    21 - Set UP git
+        git init 
+        git remote add telecom-service-api https://github.com/rason-developer/Telecom-Service-API
+        git remote -v        
+        git add --all
+        git commit -m "First commit"
+        git push -u telecom-service-api master
+
+    
