@@ -45,7 +45,7 @@ A RESTful API for managing telecom services, designed to handle thousands of req
 - **Prometheus & Grafana**: Monitoring and visualization.
 
 ### Dev Tools
-- **Postman/Insomnia**: API testing tools.
+- **Postman/REST VScode**: API testing tools.
 - **ESLint & Prettier**: Code linting and formatting.
 
 ## Specifications
