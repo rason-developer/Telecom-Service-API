@@ -1,0 +1,52 @@
+Tech: 
+        * JS / NodeJS
+        * Docker + (Kubernets)
+        * AWS, PostgreSQL, JWT
+        * Elastic Search (+)
+        * Git
+
+Steps:
+    1 - Created Telecom Services API directory
+    2 - Created docs, telecom-services-api, README.md and LICENSE
+    3 - cd telecom-service-api
+    4 - npm init -y
+    5 - modify "author", "description" and "name" in package.json
+    6 - npm i express cors dotenv morgan jsonwebtoken pg winston express-validator bcryptjs
+    7 - added to "scripts" on package.json
+        "dev":"node server.js"
+
+    8 - created server.js file
+    9 - test command ( npm run dev ) or ( npm start )
+    10 - Create the structure as in STRUCTURE.md without the "src" directory
+    11 - add .gitignore to root folder
+    12 - copy .gitignore from git(Node.gitignore)
+    13 - add .env to .gitignore
+    14 - create -env in telecom-service-api directory
+    15 - add PORT=5555 to .env
+    16 - in server.js add the following:
+        require('dotenv').config();
+        console.log(process.env.PORT)
+    17 - run the server and check if everything is ok, the output should be: "5555"
+        If it isnt, verify:
+            - your .env file, environmental variable name and value, if you have the [require('dotenv').config();] on your server.js
+            - If it still doesnt work do: npm i dotenv
+            - if it still doesnt work verify if u are using (process.env.PORT) as mentioned above.
+    18 - Added 
+            export const PORT = process.env.PORT;
+        to dotenv.config.js
+    19 - App.js: 
+        const express = require ("express");
+        const app = express();
+        module.exports = app;
+    
+    20 - Server.js: 
+        require('dotenv').config();
+        const {PORT} = require ("./config/dotenv.config");
+        const app = require("./app");
+        const http = require("http");
+        const server = http.createServer(app);
+        server.listen(PORT, () => {
+            console.log(`Server is Running on port ${PORT}`);
+        });
+
+    21 - 
